@@ -21,13 +21,13 @@
   <table class="table">
     <thead>
       <tr>
-        <th class="table__header" (click)="sort('firstName')">First Name</th>
-        <th class="table__header" (click)="sort('lastName')">Last Name</th>
-        <th class="table__header" (click)="sort('age')">Age</th>
+        <th class="table__header" (click)="sort('firstName')">First Name <i class="fa fa-sort" aria-hidden="true"></i></th>
+        <th class="table__header" (click)="sort('lastName')">Last Name <i class="fa fa-sort" aria-hidden="true"></i></th>
+        <th class="table__header" (click)="sort('age')">Age <i class="fa fa-sort" aria-hidden="true"></i></th>
       </tr>
     </thead>
     <tbody>
-      <tr class="table__row" *ngFor="let person of getPersonList()| async | sortData:order:columnName">
+      <tr class="table__row" *ngFor="let person of getPersonList()| async | sortData:sortDirection:columnName">
         <td class="table__column" field='First Name'>{{person.firstName}}</td>
         <td class="table__column" field='Last Name'>{{person.lastName}}</td>
         <td class="table__column" field='Age'>{{person.age}}</td>

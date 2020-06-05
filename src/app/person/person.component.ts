@@ -11,11 +11,11 @@ import { Observable } from 'rxjs';
     styleUrls: ['./person.component.scss']
 })
 export class PersonComponent {
-    order: string;
+    sortDirection: string;
     columnName: string;
 
     constructor(protected personService: PersonService) {
-        this.order = "";
+        this.sortDirection = "asc";
         this.columnName = "firstName";
     }
 
@@ -24,6 +24,8 @@ export class PersonComponent {
     }
 
     sort = (columnName: string): void => {
-        this.order = this.order == "asc" ? "desc": "asc";
+        debugger;
+        this.sortDirection = this.sortDirection == "asc" ? "desc": "asc";
+        this.columnName = columnName;
     }
 }
