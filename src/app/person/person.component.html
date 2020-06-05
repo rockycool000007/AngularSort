@@ -1,0 +1,37 @@
+<!-- <div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="table__header" (click)="sort(personDetail, 'firstName')">First Name</th>
+        <th class="table__header" (click)="sort(personDetail, 'lastName')">Last Name</th>
+        <th class="table__header" (click)="sort(personDetail, 'age')">Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table__row" *ngFor="let person of personDetail">
+        <td class="table__column" [attr.data-message-id]="firstName" #firstName>{{person.firstName}}</td>
+        <td class="table__column" [attr.data-message-id]="lastName" #lastName>{{person.lastName}}</td>
+        <td class="table__column" [attr.data-message-id]="age" #age>{{person.age}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="table__header" (click)="sort('firstName')">First Name</th>
+        <th class="table__header" (click)="sort('lastName')">Last Name</th>
+        <th class="table__header" (click)="sort('age')">Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table__row" *ngFor="let person of personDetail | sortBy:order:columnName">
+        <td class="table__column" [attr.data-message-id]="firstName" #firstName>{{person.firstName}}</td>
+        <td class="table__column" [attr.data-message-id]="lastName" #lastName>{{person.lastName}}</td>
+        <td class="table__column" [attr.data-message-id]="age" #age>{{person.age}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
