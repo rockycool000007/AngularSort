@@ -58,14 +58,14 @@ $font-size: .85em;
     .table__column {
         border: 1px solid $color-secondary;
         display: block;
-        padding: .5em 0;
+        padding: .5em;
         text-align: right;
         margin-right: .8em;
         &:last-child {
             border-bottom: none;
         }
         &:before {
-            content: attr(data-label);
+            content: attr(field);
             margin-left: .8em;
             font-size: $font-size;
             letter-spacing: .1em;

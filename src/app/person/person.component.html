@@ -28,9 +28,9 @@
     </thead>
     <tbody>
       <tr class="table__row" *ngFor="let person of getPersonList()| async | sortData:order:columnName">
-        <td class="table__column">{{person.firstName}}</td>
-        <td class="table__column">{{person.lastName}}</td>
-        <td class="table__column">{{person.age}}</td>
+        <td class="table__column" field='First Name'>{{person.firstName}}</td>
+        <td class="table__column" field='Last Name'>{{person.lastName}}</td>
+        <td class="table__column" field='Age'>{{person.age}}</td>
       </tr>
     </tbody>
   </table>
